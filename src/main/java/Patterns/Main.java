@@ -6,6 +6,7 @@ import Patterns.FactoryMethod.Pattern;
 import Patterns.FactoryMethod.PatternExample;
 import Patterns.FactoryMethod.ProxyPatternExample;
 import Patterns.FactoryMethod.SingletonPatternExample;
+import Patterns.FactoryMethod.UserClass;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,5 +34,11 @@ public class Main {
 
         System.out.println("\n");
         new AbstractFactory().testAbstractFabric();
+
+        UserClass userClass = new UserClass.Builder()
+                .setName("Vasya")
+                .setAge(3)
+                .setAlive(false)
+                .build();
     }
 }
